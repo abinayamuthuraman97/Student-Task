@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="Insert.jsp">
+
+
+<center><h1>Student form</h1></center>
+<center><p>Please fill these details in student database form </p></center>
+<hr>
+
+
+<center>name:<br>
+<input type="text" name="name"></center>
+<br>
+
+<center>fathername:<br>
+<input type="text" name="fathername"></center>
+</br>
+ 
+<center>age:<br>
+<input type="text" name="age"></center>
+<br>  
+
+<center>gender:<br>
+<input type="radio" name="gender" Value="Male">Male
+<input type="radio" name="gender" Value="Female">Female</center>
+<br>  
+
+<tr><center>
+<td>Course</td>
+<td><select name="Course">
+<option value="-1" selected>select..</option>
+<option value="B.Tech">B.TECH</option>
+<option value="MCA">MCA</option>
+<option value="MBA">MBA</option>
+<option value="BCA">BCA</option>
+</select></td></center>
+</tr>
+</br>
+
+<center>email:<br>
+<input type="text" name="email"></center>
+<br>
+
+<center>phonenumber:<br>
+<input type="tel" name="phonenumber"></center>
+<br>
+
+<center>dob:<br>
+<input type="text" name="dob"></center>
+<br>
+
+
+   
+    <hr><center>
+    <input type ="Submit" value="Insert"/>
+    
+   </center>
+    
+  </form>
+ <center> <button onclick="myFunction()">Back</button>
+    <script>
+    function myFunction() {
+    location.replace("Reg.html");
+	}
+	</script>
+</body>
+</html>
