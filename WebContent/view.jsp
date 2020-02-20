@@ -6,6 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 </head>
 <body>
 <center><h1>STUDENT DATABASE</h1></center>
@@ -25,6 +26,7 @@ catch(ClassNotFoundException e)
 %>
 <form><center>
 <table border="2">
+
 <tr>
 <td>ID</td>
 <td>NAME</td>
@@ -34,7 +36,10 @@ catch(ClassNotFoundException e)
 <td>COURSE</td>
 <td>EMAIL</td>
 <td>PHONENUMBER</td>
-<td>DOB</td></center>
+<td>DOB</td>
+<td>ACTION</td>
+
+</center>
 </tr>
 
 <% 
@@ -51,7 +56,7 @@ while(rs.next())
 
 %>
 <tr>
-<td><%=rs.getString("ID") %></td>
+<td><%=rs.getInt("Id") %></td>
 <td><%=rs.getString("Name") %></td>
 <td><%=rs.getString("Fathername") %></td>
 <td><%=rs.getInt("Age") %></td>
@@ -60,7 +65,10 @@ while(rs.next())
 <td><%=rs.getString("Email") %></td>
 <td><%=rs.getString("Phonenumber") %></td>
 <td><%=rs.getString("Dob") %></td>
-
+<!--  <td><a href="Update.jsp?id=<%=rs.getInt("Id")%>">update</a></td>-->
+<td><a href="Update.html">update</a></td>
+<br>
+<td><a href="Delete.jsp?id=<%=rs.getInt("Id")%>">Delete</a></td>
 </tr>
 <%
 }
@@ -69,6 +77,7 @@ catch (Exception e) {
     e.printStackTrace();
     out.println(e);
 }
+
 %>
 </table>
 </center>

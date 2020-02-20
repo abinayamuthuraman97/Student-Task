@@ -11,6 +11,8 @@
 <a href="Reg.html">Back</a>
 <%
 
+String Id=request.getParameter("Id");
+int studId=Integer.parseInt(Id);
 String Name=request.getParameter("name");
 String Fathername=request.getParameter("fathername");
 String Age=request.getParameter("age");
@@ -22,6 +24,7 @@ String Phonenumber=request.getParameter("phonenumber");
 int phno=Integer.parseInt(Phonenumber);
 //System.out.println(phno);
 String Dob=request.getParameter("dob");
+
 
 String drivername="com.mysql.cj.jdbc.Driver";
 String url="jdbc:mysql://localhost:3306/task";
@@ -44,7 +47,7 @@ try{
 
 Connection conn=DriverManager.getConnection(url,username,password);
 Statement stmt=conn.createStatement();
- String Update=" Insert into newstudent(Name,Fathername,Age,Gender,Course,Email,Phonenumber,Dob)values('"+Name+"','"+Fathername+"','"+Age+"','"+Gender+"','"+Course+"','"+Email+"',"+phno+",'"+Dob+"')";
+ String Update=" Insert into newstudent(Id,Name,Fathername,Age,Gender,Course,Email,Phonenumber,Dob)values("+studId+",'"+Name+"','"+Fathername+"','"+Age+"','"+Gender+"','"+Course+"','"+Email+"',"+phno+",'"+Dob+"')";
 int i=stmt.executeUpdate(Update);
 if(i>0)
 	out.println("insertion successful");

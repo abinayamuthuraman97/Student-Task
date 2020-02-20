@@ -3,6 +3,11 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<script>
+    function navigate() {
+    	window.location.href = "http://www.google.com";
+	}
+	</script>
 </head>
 <body>
 
@@ -12,25 +17,19 @@
  </form>
  <center><form action="Insert.html">
   <input type="Submit" value="Insert"/>
-
   </form>
   </center>
  </br>
-  <center><form action="Update.html">
-  <input type="Submit" value="Update"/>
-  </form>
-  </center>
-  </br>
- 
-  <center> <form action="Delete.html">
-  <input type="Submit" value="Delete"/>
-  </form> </center>
-  </br>
+
   
   <center><form action="view.jsp">
   <input type ="Submit" value="View"/>
   </form></center>
   </br>
   
+  <div style="position:absolute;top:40%;left:40%">
+<button onclick="navigate()">www.google.com</button>
+</div>
+
 </body>
 </html>
