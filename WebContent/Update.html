@@ -3,8 +3,16 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+  <script>
+    function navigate() {
+    location.replace("Reg.html");
+	}
+	</script>
 </head>
 <body>
+<div style="position:absolute;top:68%;left:49%">
+<button onclick="navigate()">Back</button>
+</div>
 <form action="Update.jsp">
 
 <center><h1>Student form</h1></center>
@@ -64,11 +72,7 @@
    </center>
     
   </form>
- <center> <button onclick="myFunction()">Back</button>
-    <script>
-    function myFunction() {
-    location.replace("Reg.html");
-	}
-	</script>
+ <center> 
+  
 </body>
 </html>

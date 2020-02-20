@@ -73,9 +73,9 @@ catch (Exception e) {
 </table>
 </center>
 </form>
- <center><button onclick="myFunction()">Back</button>
+ <center><button onclick="navigate()">Back</button>
     <script>
-    function myFunction() {
+    function navigate() {
     location.replace("Reg.html")
 	}
 	</script>
